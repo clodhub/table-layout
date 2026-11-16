@@ -1,6 +1,6 @@
 {
   "name": "table-layout",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "title": "Table layout",
   "description": "Seats around an oval table on every screen size, plus a television layout, as a pure function of the seat count and the area.",
   "facilities": [
@@ -88,9 +88,9 @@
     "java": "26.0.1"
   },
   "platforms": [
-    "web",
+    "android",
     "apple",
-    "android"
+    "web"
   ],
   "text": {
     "purpose": "`table-layout` puts people around a table. Given a seat count (2 to 9) and an area it returns where each seat, its hidden cards, its open cards and its stake go, where the deck, burn pile, five board cards and pot go, and how big the cards are, for three screen classes: a phone-shaped portrait table box (positions placed so nothing overlaps at any count), a wide landscape table whose seats sit at equal distances round an oval and are turned to face out, and a television layout with fixed upright seats. Seat 0 is always the viewer's, at the bottom, and the others follow clockwise. The geometry is pure and has no game words; seats and the middle show whatever the application passes in.",
@@ -120,5 +120,204 @@
       }
     ],
     "notes": "Pure library; no provider limits apply."
+  },
+  "classes": [
+    {
+      "reference": {
+        "name": "ourapps-ae/table-layout-class",
+        "version": "1.0.0",
+        "digest": "f254762503718ff7120668e14f2d2d51a5b0e58dd04e6a0e81f0b92844e6d54c"
+      },
+      "descriptor": {
+        "format": 1,
+        "name": "ourapps-ae/table-layout-class",
+        "version": "1.0.0",
+        "provides": [
+          {
+            "type": "ae/table-layout",
+            "version": "1.0.0",
+            "path": "classes/table-layout-class/table-layout.json",
+            "modules": {
+              "web": [
+                "web/index.ts"
+              ],
+              "android": [
+                "android/src/main/java"
+              ],
+              "ios": [
+                "apple/Sources"
+              ],
+              "macos": [
+                "apple/Sources"
+              ],
+              "tvos": [
+                "apple/Sources"
+              ],
+              "windows": [
+                "web/index.ts"
+              ]
+            }
+          }
+        ],
+        "requires": [
+          {
+            "type": "ae/theme",
+            "version": "1.0.0"
+          },
+          {
+            "type": "ae/controls",
+            "version": "1.0.0"
+          }
+        ],
+        "settings": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        },
+        "inventory": [
+          {
+            "path": "classes/table-layout-class/check.mjs",
+            "digest": "37fc3b19bbbb64758bbff40e59fae328cdb0c08551cab1530f637640e8919eff"
+          },
+          {
+            "path": "classes/table-layout-class/runtime.mjs",
+            "digest": "7440f3891614c423f74668cb5a2445fea58bbfa4d7c740c8e8a855d1d9300d43"
+          },
+          {
+            "path": "classes/table-layout-class/table-layout.json",
+            "digest": "d80dbd6b570d4e696e391838151daa72c45e4a4911980c567d30a25818fbc284"
+          }
+        ],
+        "verification": [
+          {
+            "id": "shared",
+            "root": "package",
+            "argv": [
+              "node",
+              "classes/table-layout-class/check.mjs"
+            ],
+            "cwd": ".",
+            "prepare": [],
+            "tools": {
+              "node": "26.5"
+            },
+            "fixtures": [
+              "classes/table-layout-class/check.mjs"
+            ],
+            "locks": [],
+            "network": false,
+            "timeoutSeconds": 60,
+            "expectedExit": 0,
+            "scope": "required-local",
+            "requirements": []
+          }
+        ]
+      }
+    }
+  ],
+  "implements": [
+    {
+      "name": "ourapps-ae/table-layout-class",
+      "version": "1.0.0",
+      "digest": "f254762503718ff7120668e14f2d2d51a5b0e58dd04e6a0e81f0b92844e6d54c"
+    }
+  ],
+  "upstream": [],
+  "compatibility": {
+    "runtimes": {
+      "node": ">=26.5.0 <27.0.0",
+      "swift": "=6.4.2",
+      "ios": ">=17.0.0",
+      "macos": ">=14.0.0",
+      "tvos": ">=17.0.0",
+      "kotlin": "=2.3.20",
+      "java": ">=17.0.0 <27.0.0",
+      "android": ">=8.0.0"
+    },
+    "frameworks": {
+      "android-ui": {
+        "name": "androidx.compose.ui",
+        "range": "=1.10.0"
+      }
+    },
+    "dependencies": [
+      {
+        "name": "pkg:maven/androidx.compose.ui/ui",
+        "version": "1.10.0",
+        "isolation": "shared"
+      },
+      {
+        "name": "pkg:maven/androidx.compose.material3/material3",
+        "version": "1.4.0",
+        "isolation": "shared"
+      }
+    ],
+    "styles": {
+      "scope": "global",
+      "namespaces": [
+        ".tl-centre::position",
+        ".tl-centre::transform",
+        ".tl-centre::z-index",
+        ".tl-felt::background",
+        ".tl-felt::border-radius",
+        ".tl-felt::box-shadow",
+        ".tl-felt::position",
+        ".tl-seat::pointer-events",
+        ".tl-seat::position",
+        ".tl-seat::z-index",
+        ".tl-table::position",
+        ".tl-table::width",
+        ".tl-tv-header::align-items",
+        ".tl-tv-header::display",
+        ".tl-tv-header::gap",
+        ".tl-tv-header::justify-content",
+        ".tl-tv-table > .tl-table::height",
+        ".tl-tv-table > .tl-table::max-height",
+        ".tl-tv-table > .tl-table::width",
+        ".tl-tv-table::align-items",
+        ".tl-tv-table::display",
+        ".tl-tv-table::flex",
+        ".tl-tv-table::justify-content",
+        ".tl-tv-table::min-height",
+        ".tl-tv-title::font-size",
+        ".tl-tv-title::margin",
+        ".tl-tv::box-sizing",
+        ".tl-tv::display",
+        ".tl-tv::flex-direction",
+        ".tl-tv::gap",
+        ".tl-tv::height",
+        ".tl-tv::padding"
+      ],
+      "conflicts": []
+    }
+  },
+  "maintenance": {
+    "owners": [
+      "Level N Ltd"
+    ],
+    "contact": "https://github.com/ourapps-ae/table-layout/issues",
+    "repository": "https://github.com/ourapps-ae/table-layout",
+    "updates": {
+      "source": "https://github.com/ourapps-ae/table-layout/releases",
+      "strategy": "manual"
+    }
+  },
+  "supportedPlatforms": [
+    "android",
+    "ios",
+    "macos",
+    "tvos",
+    "web",
+    "windows"
+  ],
+  "licence": "Apache-2.0",
+  "licenceFile": "LICENCE",
+  "noticeFile": "NOTICE",
+  "templates": [],
+  "modules": {
+    "web": "web/index.ts",
+    "android": "android/src/main/java",
+    "apple": "apple/Sources"
   }
 }
