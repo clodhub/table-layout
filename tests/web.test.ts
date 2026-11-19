@@ -210,9 +210,19 @@ test("a television screen has a header, a banner and the table", () => {
   assert.equal(tableFor({ seats: 3, width: 1280, height: 720, seat: () => "s" as unknown as Node }).orientation, "landscape");
 });
 
+// The same text with every number within 1e-9 of the other's: trigonometry differs in the last bits between machines.
+function nearlySame(stored: string, built: string, name: string) {
+  const NUMBER = /-?\d+(?:\.\d+)?(?:e[-+]?\d+)?/g;
+  assert.equal(stored.replace(NUMBER, "#"), built.replace(NUMBER, "#"), name);
+  const a = stored.match(NUMBER) ?? [], b = built.match(NUMBER) ?? [];
+  assert.equal(a.length, b.length, name);
+  a.forEach((value, i) => assert.ok(Math.abs(Number(value) - Number(b[i])) <= 1e-9, `${name}: number ${i} is ${value}, built ${b[i]}`));
+}
+
 test("the native fixtures are the TypeScript layouts", () => {
-  assert.equal(readFileSync(new URL("fixtures/layouts.json", import.meta.url), "utf8"), buildFixtures());
-  assert.equal(readFileSync(new URL("android/Expected.kt", import.meta.url), "utf8"), buildKotlin());
+  nearlySame(readFileSync(new URL("fixtures/layouts.json", import.meta.url), "utf8"), buildFixtures(), "fixtures/layouts.json");
+  nearlySame(readFileSync(new URL("android/Expected.kt", import.meta.url), "utf8"), buildKotlin(), "android/Expected.kt");
+  assert.throws(() => nearlySame("[0.5]", "[0.5001]", "probe"));
 });
 
 test("a consumer lays names out for any screen without a game", () => {
