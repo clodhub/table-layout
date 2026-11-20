@@ -1,6 +1,6 @@
 {
   "name": "table-layout",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "title": "Table layout",
   "description": "Seats around an oval table on every screen size, plus a television layout, as a pure function of the seat count and the area.",
   "facilities": [
@@ -130,13 +130,17 @@
     {
       "reference": {
         "name": "ourapps-ae/table-layout-class",
-        "version": "1.0.0",
-        "digest": "f254762503718ff7120668e14f2d2d51a5b0e58dd04e6a0e81f0b92844e6d54c"
+        "version": "1.1.0",
+        "digest": "389d934599befffde27a65d46729b932f5d14ebc38220f0b2dc113fe2592f1a7"
       },
       "descriptor": {
-        "format": 1,
+        "format": 2,
         "name": "ourapps-ae/table-layout-class",
-        "version": "1.0.0",
+        "version": "1.1.0",
+        "title": "Table layout",
+        "summary": "Seat, card and stake positions around a table for any screen",
+        "category": "games/tables-and-seating",
+        "presentation": "visual",
         "provides": [
           {
             "type": "ae/table-layout",
@@ -224,8 +228,8 @@
   "implements": [
     {
       "name": "ourapps-ae/table-layout-class",
-      "version": "1.0.0",
-      "digest": "f254762503718ff7120668e14f2d2d51a5b0e58dd04e6a0e81f0b92844e6d54c"
+      "version": "1.1.0",
+      "digest": "389d934599befffde27a65d46729b932f5d14ebc38220f0b2dc113fe2592f1a7"
     }
   ],
   "upstream": [],
@@ -236,7 +240,7 @@
       "ios": ">=17.0.0",
       "macos": ">=14.0.0",
       "tvos": ">=17.0.0",
-      "kotlin": "=2.3.20",
+      "kotlin": "=2.4.21",
       "java": ">=17.0.0 <27.0.0",
       "android": ">=8.0.0"
     },
@@ -532,5 +536,40 @@
         "manual": "Without the package manager, install Node 26 from nodejs.org (the installer, or the zip or tar archive with its folder put first on PATH); on Linux also from the NodeSource repository."
       }
     ]
-  }
+  },
+  "release": {
+    "channel": "features",
+    "fixes": []
+  },
+  "images": [
+    {
+      "caption": "Nine seats around a landscape table on a computer screen, night look",
+      "height": 800,
+      "path": "images/computer-9-seats.png",
+      "platform": "web",
+      "width": 1280
+    },
+    {
+      "caption": "Six seats on a computer screen in the lounge look",
+      "height": 800,
+      "path": "images/computer-6-seats-lounge.png",
+      "platform": "web",
+      "width": 1280
+    },
+    {
+      "caption": "Six seats on a portrait phone, the viewer at the bottom",
+      "height": 844,
+      "path": "images/phone-portrait.png",
+      "platform": "web",
+      "width": 390
+    },
+    {
+      "caption": "The television screen: title, banner and the table filling the rest",
+      "height": 720,
+      "path": "images/television.png",
+      "platform": "web",
+      "width": 1280
+    }
+  ],
+  "vulnerabilityWaivers": []
 }
