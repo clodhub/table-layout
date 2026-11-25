@@ -7,12 +7,12 @@
   "focus": "component",
   "definitions": [
     {
-      "id": "ourapps-ae.table-layout",
+      "id": "clodhub.table-layout",
       "name": "Table layout",
       "kind": "component",
       "status": "example",
-      "package": "ourapps-ae/table-layout",
-      "version": "0.9.0",
+      "package": "clodhub/table-layout",
+      "version": "0.10.0",
       "ports": [
         {
           "id": "theme",
@@ -86,7 +86,7 @@
     {
       "id": "component",
       "name": "Table layout",
-      "definition": "ourapps-ae.table-layout",
+      "definition": "clodhub.table-layout",
       "configuration": {}
     },
     {

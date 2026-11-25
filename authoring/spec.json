@@ -1,6 +1,6 @@
 {
   "name": "table-layout",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "title": "Table layout",
   "description": "Seats around an oval table on every screen size, plus a television layout, as a pure function of the seat count and the area.",
   "facilities": [
@@ -43,7 +43,7 @@
       ],
       "scope": "required-local",
       "tools": {
-        "node": "26.5.0"
+        "node": "26.5"
       }
     },
     {
@@ -62,8 +62,8 @@
         "tests/apple/theme/ThemeTypes.swift"
       ],
       "tools": {
-        "python3": "3.12.8",
-        "swiftc": "6.4.2",
+        "python3": "3.12",
+        "swiftc": "6.4",
         "xcrun": "72"
       }
     },
@@ -79,18 +79,19 @@
         "tests/android/Main.kt"
       ],
       "tools": {
-        "python3": "3.12.8",
-        "kotlinc": "2.2.0",
-        "java": "26.0.1"
+        "java": "26.0",
+        "kotlinc": "2.2",
+        "python3": "3.12"
       }
     }
   ],
   "tools": {
-    "node": "26.5.0",
-    "python3": "3.12.8",
-    "swiftc": "6.4.2",
-    "kotlinc": "2.2.0",
-    "java": "26.0.1"
+    "node": "26.5",
+    "python3": "3.12",
+    "swiftc": "6.4",
+    "xcrun": "72",
+    "kotlinc": "2.2",
+    "java": "26.0"
   },
   "platforms": [
     "android",
@@ -106,7 +107,7 @@
     "scenarios": "A six-seat game on a phone shows the portrait table with six seats around the oval; rotate the phone and the landscape table appears with seats turned to face outward; a television shows the same game upright with fixed spots and a banner; a two-seat game and a nine-seat game use the same code path. A viewer can spin a landscape table by passing `turn`.",
     "updates": "Patch updates replace files only. The component keeps no data; removal deletes its files and the application's imports of them."
   },
-  "agentInstructions": "Select `ourapps-ae/table-layout`; connect `theme` to the theme component and `controls` to the controls component. It applies to any recipe with a table of 2 to 9 seats; for fewer or more seats say so, as the portrait positions are placed data for 2 to 9 only.",
+  "agentInstructions": "Select `clodhub/table-layout`; connect `theme` to the theme component and `controls` to the controls component. It applies to any recipe with a table of 2 to 9 seats; for fewer or more seats say so, as the portrait positions are placed data for 2 to 9 only.",
   "developerInstructions": "Supply the seat and centre content. Add a screen class by adding a case to `tableLayout` and a fixed-spot table in the same shape; keep web, Swift and Kotlin the same (the fixtures check it). Regenerate fixtures with `node tests/make-fixtures.ts` after any change to the layout.",
   "suitability": {
     "format": 1,
@@ -129,13 +130,13 @@
   "classes": [
     {
       "reference": {
-        "name": "ourapps-ae/table-layout-class",
+        "name": "clodhub/table-layout-class",
         "version": "1.1.0",
-        "digest": "389d934599befffde27a65d46729b932f5d14ebc38220f0b2dc113fe2592f1a7"
+        "digest": "9aeb887361501cf1e24ee14c9e8fc2c60aeabcbe87189ebba40b49c431584dc7"
       },
       "descriptor": {
         "format": 2,
-        "name": "ourapps-ae/table-layout-class",
+        "name": "clodhub/table-layout-class",
         "version": "1.1.0",
         "title": "Table layout",
         "summary": "Seat, card and stake positions around a table for any screen",
@@ -195,7 +196,7 @@
           },
           {
             "path": "classes/table-layout-class/table-layout.json",
-            "digest": "d80dbd6b570d4e696e391838151daa72c45e4a4911980c567d30a25818fbc284"
+            "digest": "e3178f355d747c8d18f2f7d5fd9359cc3c6d15287fad6db1abe81bf8a8a6e050"
           }
         ],
         "verification": [
@@ -227,9 +228,9 @@
   ],
   "implements": [
     {
-      "name": "ourapps-ae/table-layout-class",
+      "name": "clodhub/table-layout-class",
       "version": "1.1.0",
-      "digest": "389d934599befffde27a65d46729b932f5d14ebc38220f0b2dc113fe2592f1a7"
+      "digest": "9aeb887361501cf1e24ee14c9e8fc2c60aeabcbe87189ebba40b49c431584dc7"
     }
   ],
   "upstream": [],
@@ -305,10 +306,10 @@
     "owners": [
       "Level N Ltd"
     ],
-    "contact": "https://github.com/ourapps-ae/table-layout/issues",
-    "repository": "https://github.com/ourapps-ae/table-layout",
+    "contact": "https://github.com/clodhub/table-layout/issues",
+    "repository": "https://github.com/clodhub/table-layout",
     "updates": {
-      "source": "https://github.com/ourapps-ae/table-layout/releases",
+      "source": "https://github.com/clodhub/table-layout/releases",
       "strategy": "manual"
     }
   },
