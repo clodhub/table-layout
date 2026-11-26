@@ -7,19 +7,19 @@
   "focus": "component",
   "definitions": [
     {
-      "id": "clodhub.table-layout",
+      "id": "com.clodhub.table-layout",
       "name": "Table layout",
       "kind": "component",
       "status": "example",
-      "package": "clodhub/table-layout",
-      "version": "0.10.0",
+      "package": "pkg:clod/com.clodhub/table-layout",
+      "version": "0.11.0",
       "ports": [
         {
           "id": "theme",
           "name": "Theme",
           "direction": "input",
           "kind": "interface",
-          "type": "ae/theme",
+          "type": "com.clodhub/theme",
           "version": "1.0.0",
           "required": true,
           "cardinality": "one"
@@ -29,7 +29,7 @@
           "name": "Controls",
           "direction": "input",
           "kind": "interface",
-          "type": "ae/controls",
+          "type": "com.clodhub/controls",
           "version": "1.0.0",
           "required": true,
           "cardinality": "one"
@@ -39,7 +39,7 @@
           "name": "Table layout",
           "direction": "output",
           "kind": "interface",
-          "type": "ae/table-layout",
+          "type": "com.clodhub/table-layout",
           "version": "1.0.0"
         }
       ],
@@ -57,7 +57,7 @@
           "name": "Table layout",
           "direction": "input",
           "kind": "interface",
-          "type": "ae/table-layout",
+          "type": "com.clodhub/table-layout",
           "version": "1.0.0",
           "required": true,
           "cardinality": "one"
@@ -67,7 +67,7 @@
           "name": "Theme",
           "direction": "output",
           "kind": "interface",
-          "type": "ae/theme",
+          "type": "com.clodhub/theme",
           "version": "1.0.0"
         },
         {
@@ -75,7 +75,7 @@
           "name": "Controls",
           "direction": "output",
           "kind": "interface",
-          "type": "ae/controls",
+          "type": "com.clodhub/controls",
           "version": "1.0.0"
         }
       ],
@@ -86,7 +86,7 @@
     {
       "id": "component",
       "name": "Table layout",
-      "definition": "clodhub.table-layout",
+      "definition": "com.clodhub.table-layout",
       "configuration": {}
     },
     {

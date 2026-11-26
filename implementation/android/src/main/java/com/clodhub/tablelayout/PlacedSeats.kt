@@ -1,4 +1,4 @@
-package ae.tablelayout
+package com.clodhub.tablelayout
 
 // Where each seat's hidden cards, open cards and stake sit on the portrait table, as fractions of the table box,
 // by seat count (2 to 9) and seat index (0 is the viewer's at the bottom, then clockwise). Same data as web/placed-seats.ts.

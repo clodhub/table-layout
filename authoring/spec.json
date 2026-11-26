@@ -1,6 +1,7 @@
 {
   "name": "table-layout",
-  "version": "0.10.0",
+  "version": "0.11.0",
+  "sourceRevision": "19905b75dbea89fbfd424d67fe26c81aaed0e018",
   "title": "Table layout",
   "description": "Seats around an oval table on every screen size, plus a television layout, as a pure function of the seat count and the area.",
   "facilities": [
@@ -12,7 +13,7 @@
   "provides": [
     {
       "id": "table-layout",
-      "type": "ae/table-layout",
+      "type": "com.clodhub/table-layout",
       "version": "1.0.0",
       "path": "interfaces/table-layout.json"
     }
@@ -20,13 +21,13 @@
   "requires": [
     {
       "id": "theme",
-      "type": "ae/theme",
+      "type": "com.clodhub/theme",
       "version": "1.0.0",
       "path": "interfaces/required-theme.json"
     },
     {
       "id": "controls",
-      "type": "ae/controls",
+      "type": "com.clodhub/controls",
       "version": "1.0.0",
       "path": "interfaces/required-controls.json"
     }
@@ -107,7 +108,7 @@
     "scenarios": "A six-seat game on a phone shows the portrait table with six seats around the oval; rotate the phone and the landscape table appears with seats turned to face outward; a television shows the same game upright with fixed spots and a banner; a two-seat game and a nine-seat game use the same code path. A viewer can spin a landscape table by passing `turn`.",
     "updates": "Patch updates replace files only. The component keeps no data; removal deletes its files and the application's imports of them."
   },
-  "agentInstructions": "Select `clodhub/table-layout`; connect `theme` to the theme component and `controls` to the controls component. It applies to any recipe with a table of 2 to 9 seats; for fewer or more seats say so, as the portrait positions are placed data for 2 to 9 only.",
+  "agentInstructions": "Select `pkg:clod/com.clodhub/table-layout`; connect `theme` to the theme component and `controls` to the controls component. It applies to any recipe with a table of 2 to 9 seats; for fewer or more seats say so, as the portrait positions are placed data for 2 to 9 only.",
   "developerInstructions": "Supply the seat and centre content. Add a screen class by adding a case to `tableLayout` and a fixed-spot table in the same shape; keep web, Swift and Kotlin the same (the fixtures check it). Regenerate fixtures with `node tests/make-fixtures.ts` after any change to the layout.",
   "suitability": {
     "format": 1,
@@ -130,13 +131,13 @@
   "classes": [
     {
       "reference": {
-        "name": "clodhub/table-layout-class",
+        "name": "pkg:clod/com.clodhub/table-layout-class",
         "version": "1.1.0",
-        "digest": "9aeb887361501cf1e24ee14c9e8fc2c60aeabcbe87189ebba40b49c431584dc7"
+        "digest": "fedffd4e439a56db251d53b977a2f691bf00c2390d3da4cd89fb0a82d216355c"
       },
       "descriptor": {
-        "format": 2,
-        "name": "clodhub/table-layout-class",
+        "format": 3,
+        "name": "pkg:clod/com.clodhub/table-layout-class",
         "version": "1.1.0",
         "title": "Table layout",
         "summary": "Seat, card and stake positions around a table for any screen",
@@ -144,7 +145,7 @@
         "presentation": "visual",
         "provides": [
           {
-            "type": "ae/table-layout",
+            "type": "com.clodhub/table-layout",
             "version": "1.0.0",
             "path": "classes/table-layout-class/table-layout.json",
             "modules": {
@@ -171,11 +172,11 @@
         ],
         "requires": [
           {
-            "type": "ae/theme",
+            "type": "com.clodhub/theme",
             "version": "1.0.0"
           },
           {
-            "type": "ae/controls",
+            "type": "com.clodhub/controls",
             "version": "1.0.0"
           }
         ],
@@ -192,11 +193,11 @@
           },
           {
             "path": "classes/table-layout-class/runtime.mjs",
-            "digest": "7440f3891614c423f74668cb5a2445fea58bbfa4d7c740c8e8a855d1d9300d43"
+            "digest": "1d85f0dae92d5c6c859cd48a4211a933718ae3e168554a2b00806183c4b661f0"
           },
           {
             "path": "classes/table-layout-class/table-layout.json",
-            "digest": "e3178f355d747c8d18f2f7d5fd9359cc3c6d15287fad6db1abe81bf8a8a6e050"
+            "digest": "c0e90bacbb0de8a66e772aa37881d428961982f0bbd09e2abde6d7e454cc4039"
           }
         ],
         "verification": [
@@ -228,9 +229,9 @@
   ],
   "implements": [
     {
-      "name": "clodhub/table-layout-class",
+      "name": "pkg:clod/com.clodhub/table-layout-class",
       "version": "1.1.0",
-      "digest": "9aeb887361501cf1e24ee14c9e8fc2c60aeabcbe87189ebba40b49c431584dc7"
+      "digest": "fedffd4e439a56db251d53b977a2f691bf00c2390d3da4cd89fb0a82d216355c"
     }
   ],
   "upstream": [],

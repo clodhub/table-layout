@@ -11,9 +11,9 @@ No installer settings. The application passes the seat count, the screen size, w
 ## Artefacts and dependencies
 `component.json` maps every `implementation/` source into `components/table-layout/`:
 
-- `implementation/android/src/main/java/ae/tablelayout/OvalTable.kt` -> `components/table-layout/android/src/main/java/ae/tablelayout/OvalTable.kt`
-- `implementation/android/src/main/java/ae/tablelayout/PlacedSeats.kt` -> `components/table-layout/android/src/main/java/ae/tablelayout/PlacedSeats.kt`
-- `implementation/android/src/main/java/ae/tablelayout/TableLayout.kt` -> `components/table-layout/android/src/main/java/ae/tablelayout/TableLayout.kt`
+- `implementation/android/src/main/java/com/clodhub/tablelayout/OvalTable.kt` -> `components/table-layout/android/src/main/java/com/clodhub/tablelayout/OvalTable.kt`
+- `implementation/android/src/main/java/com/clodhub/tablelayout/PlacedSeats.kt` -> `components/table-layout/android/src/main/java/com/clodhub/tablelayout/PlacedSeats.kt`
+- `implementation/android/src/main/java/com/clodhub/tablelayout/TableLayout.kt` -> `components/table-layout/android/src/main/java/com/clodhub/tablelayout/TableLayout.kt`
 - `implementation/apple/Sources/PlacedSeats.swift` -> `components/table-layout/apple/Sources/PlacedSeats.swift`
 - `implementation/apple/Sources/TableLayout.swift` -> `components/table-layout/apple/Sources/TableLayout.swift`
 - `implementation/apple/Sources/TableView.swift` -> `components/table-layout/apple/Sources/TableView.swift`
@@ -26,11 +26,11 @@ Dependencies: none.
 `tools.lock.json` pins verification tools: node 26.5, python3 3.12, swiftc 6.4, xcrun 72, kotlinc 2.2, java 26.0. Licence wording remains deferred.
 
 ## Provided interfaces
-- `interfaces/table-layout.json` defines `table-layout` (ae/table-layout) version 1.0.0 as an OpenRPC 1.3.2 document: one method per web function (`Ring` and its methods as `Ring.angle` and so on), each description naming the Swift and Kotlin form or saying it is web only, with `TableLayout`, `SeatSpot`, `Point`, `PlacedSeats` and the seat limits as JSON Schema 2020-12 under `components.schemas`. Seat callbacks and DOM nodes are described as host values, not serialised.
+- `interfaces/table-layout.json` defines `table-layout` (com.clodhub/table-layout) version 1.0.0 as an OpenRPC 1.3.2 document: one method per web function (`Ring` and its methods as `Ring.angle` and so on), each description naming the Swift and Kotlin form or saying it is web only, with `TableLayout`, `SeatSpot`, `Point`, `PlacedSeats` and the seat limits as JSON Schema 2020-12 under `components.schemas`. Seat callbacks and DOM nodes are described as host values, not serialised.
 
 ## Required interfaces
-- `theme` (ae/theme) version 1.0.0, supplied by the recipe or application. Its interface document is a copy of the theme component's OpenRPC document; table-layout reads the theme's `--table` and `--table-edge` CSS variables (web) and `ThemeSet` colours (Swift, Kotlin).
-- `controls` (ae/controls) version 1.0.0, supplied by the recipe or application. Its interface document is a copy of the controls component's OpenRPC document; `tvScreen` takes the node its `banner` builds and table-layout calls no controls function itself.
+- `theme` (com.clodhub/theme) version 1.0.0, supplied by the recipe or application. Its interface document is a copy of the theme component's OpenRPC document; table-layout reads the theme's `--table` and `--table-edge` CSS variables (web) and `ThemeSet` colours (Swift, Kotlin).
+- `controls` (com.clodhub/controls) version 1.0.0, supplied by the recipe or application. Its interface document is a copy of the controls component's OpenRPC document; `tvScreen` takes the node its `banner` builds and table-layout calls no controls function itself.
 
 ## Integration
 Web: call `tableLayout` (or `tableFor`, which also chooses the class from the screen size) and `tableView` from `web/table-view.ts`, passing a function that returns the node for each seat and a centre node; link `web/table-layout.css` after the theme's CSS (it reads `--table` and `--table-edge`). `tvScreen` wraps a table with a title, the controls component's `banner` and an exit control. Use `relativeSeat` to turn a server seat number into a position relative to the viewer. Apple: compile `PlacedSeats.swift` and `TableLayout.swift` anywhere, and `TableView.swift` (`OvalTable`, `TelevisionTable`) in UIKit targets with the theme's Swift files. Android: add `PlacedSeats.kt`, `TableLayout.kt` and `OvalTable.kt` to a Compose module with the theme's Kotlin files. Betting controls, cards, chips and poker text are not here: seats and the centre are the caller's, usually built from `card-graphics`, `chip-graphics` and `controls`.

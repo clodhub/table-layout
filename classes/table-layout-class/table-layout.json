@@ -1,9 +1,9 @@
 {
   "openrpc": "1.3.2",
   "info": {
-    "title": "ae/table-layout",
+    "title": "com.clodhub/table-layout",
     "version": "1.0.0",
-    "description": "Seats around an oval table on every screen size (portrait, landscape, television) as a pure function of the seat count and the area, plus views that place seats from it. Web: implementation/web/layout.ts, table-view.ts, placed-seats.ts and table-layout.css (reads the theme's --table and --table-edge). Apple: TableGeometry, Ring, OvalTable and TelevisionTable in SwiftUI. Android: TableGeometry, Ring and the Compose function OvalTable in package ae.tablelayout."
+    "description": "Seats around an oval table on every screen size (portrait, landscape, television) as a pure function of the seat count and the area, plus views that place seats from it. Web: implementation/web/layout.ts, table-view.ts, placed-seats.ts and table-layout.css (reads the theme's --table and --table-edge). Apple: TableGeometry, Ring, OvalTable and TelevisionTable in SwiftUI. Android: TableGeometry, Ring and the Compose function OvalTable in package com.clodhub.tablelayout."
   },
   "methods": [
     {

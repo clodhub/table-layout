@@ -17,9 +17,9 @@ Reference revision: `19905b75dbea89fbfd424d67fe26c81aaed0e018`. Extracted from t
 
 ## Android
 
-- `implementation/android/src/main/java/ae/tablelayout/PlacedSeats.kt` <- `android/app/src/main/java/app/ourapps/ourpoker/ui/Layout.kt:1-35` (same data, `Pair` instead of `FloatArray`, doubles).
-- `implementation/android/src/main/java/ae/tablelayout/TableLayout.kt` <- `ui/Chips.kt:98-131` (`Spots`) for the portrait part; the landscape ring and television layout are `generated-platform`, translated from the Swift (the recipe's Android has only the portrait table, `ui/TableScreen.kt:212` `aspectRatio(1f / 1.3f)`).
-- `implementation/android/src/main/java/ae/tablelayout/OvalTable.kt` <- new Compose view (`generated-platform`) over the placement in `ui/TableScreen.kt:212-400`.
+- `implementation/android/src/main/java/com/clodhub/tablelayout/PlacedSeats.kt` <- `android/app/src/main/java/app/ourapps/ourpoker/ui/Layout.kt:1-35` (same data, `Pair` instead of `FloatArray`, doubles).
+- `implementation/android/src/main/java/com/clodhub/tablelayout/TableLayout.kt` <- `ui/Chips.kt:98-131` (`Spots`) for the portrait part; the landscape ring and television layout are `generated-platform`, translated from the Swift (the recipe's Android has only the portrait table, `ui/TableScreen.kt:212` `aspectRatio(1f / 1.3f)`).
+- `implementation/android/src/main/java/com/clodhub/tablelayout/OvalTable.kt` <- new Compose view (`generated-platform`) over the placement in `ui/TableScreen.kt:212-400`.
 
 ## Tests
 

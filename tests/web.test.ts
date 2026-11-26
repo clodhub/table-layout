@@ -235,7 +235,7 @@ test("a consumer lays names out for any screen without a game", () => {
 test("the OpenRPC interface describes the layout shape and the exported functions", async () => {
   const doc = JSON.parse(readFileSync(new URL("../interfaces/table-layout.json", import.meta.url), "utf8"));
   assert.equal(doc.openrpc, "1.3.2");
-  assert.deepEqual([doc.info.title, doc.info.version], ["ae/table-layout", "1.0.0"]);
+  assert.deepEqual([doc.info.title, doc.info.version], ["com.clodhub/table-layout", "1.0.0"]);
   const { TableLayout: shape, SeatSpot, Limits, Orientation } = doc.components.schemas;
   for (const o of Orientation.enum as Orientation[]) {
     const l = layoutOf(5, o);

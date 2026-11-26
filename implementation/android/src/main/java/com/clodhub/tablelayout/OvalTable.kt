@@ -1,6 +1,6 @@
-package ae.tablelayout
+package com.clodhub.tablelayout
 
-import ae.theme.ThemeSet
+import com.clodhub.theme.ThemeSet
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.aspectRatio

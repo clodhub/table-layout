@@ -1,9 +1,9 @@
 {
   "openrpc": "1.3.2",
   "info": {
-    "title": "ae/controls",
+    "title": "com.clodhub/controls",
     "version": "1.0.0",
-    "description": "Buttons, icon buttons, toggles, panels, banners, dialogs and help pages that draw with the theme's tokens. Text is always supplied already translated. Web: implementation/web (DOM elements styled by controls.css from the theme CSS variables). Apple: SwiftUI views in implementation/apple/Sources. Android: Compose functions in package ae.controls."
+    "description": "Buttons, icon buttons, toggles, panels, banners, dialogs and help pages that draw with the theme's tokens. Text is always supplied already translated. Web: implementation/web (DOM elements styled by controls.css from the theme CSS variables). Apple: SwiftUI views in implementation/apple/Sources. Android: Compose functions in package com.clodhub.controls."
   },
   "methods": [
     {
@@ -557,7 +557,7 @@
           "required": true,
           "schema": {
             "type": "object",
-            "description": "A theme ThemeSet (ae/theme Tokens)."
+            "description": "A theme ThemeSet (com.clodhub/theme Tokens)."
           }
         }
       ],
